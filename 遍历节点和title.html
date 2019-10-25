@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("img").each(function (index) {
+                $(this).attr("title","第"+(index+1)+"张图片");
+            })
+
+        });
+    </script>
+</head>
+<body>
+<div>
+    <img height="60" width="80" src="img/1.jpg"/>
+    <img height="60" width="80" src="img/2.jpg"/>
+    <img height="60" width="80" src="img/3.jpg"/>
+    <img height="60" width="80" src="img/4.jpg"/>
+    <img height="60" width="80" src="img/5.jpg"/>
+    <img height="60" width="80" src="img/6.jpg"/>
+</div>
+</body>
+</html>
