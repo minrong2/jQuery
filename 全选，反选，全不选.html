@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function() {
+            $("#checkAll").click(function () {
+                $("input[type=checkbox]").prop("checked", true);  //全选
+            });
+            $("#unCheckAll").click(function () {
+                $("input[type=checkbox]").prop("checked",false);  //全不选
+            });
+
+            $("#revBtn").click(function () {                     //反选
+                $("input[type=checkbox]").each(function () {
+                    this.checked = !this.checked;
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+<h3 align="center">选择你喜欢的运动</h3>
+<p>
+    <input type="checkbox" name="hobby" value="游泳">游泳
+    <input type="checkbox" name="hobby" value="足球">足球
+    <input type="checkbox" name="hobby" value="篮球">篮球
+    <input type="checkbox" name="hobby" value="滑冰">滑冰
+    <input type="checkbox" name="hobby" value="滑雪">滑雪
+    <input type="checkbox" name="hobby" value="乒乓球">乒乓球
+</p>
+<input type="button" id="checkAll" value="全选">
+<input type="button" id="unCheckAll" value="全不选">
+<input type="button" id="revBtn" value="反选">
+</form>
+</body>
+</html>
