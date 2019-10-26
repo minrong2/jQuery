@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#vbtn").click(function(){
+                if($("#testInput").val() != ""){
+                    alert($("#testInput").val());        // 弹出文本框的值
+                    $("#testInput").attr("disabled","disabled");   // 将文本框变为不可编辑状态
+                }else{
+                    alert("请输入文本内容！");
+                    $("#testInput").focus();             // 将焦点设置到文本框处
+                    return false;
+                }
+            });
+            $("#dbtn").click(function(){
+                if($("#testInput").attr("disabled") == "disabled"){
+                    $("#testInput").removeAttr("disabled");            // 移除文本框的disabled属性
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+<p>用户名：<input type="text" name="testInput" id="testInput" /> </p>
+<input type="submit" name="vbtn" id="vbtn" value="提交" />
+<input type="button" name="dbtn" id="dbtn" value="修改" />
+</body>
+</html>
