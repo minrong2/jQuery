@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>折叠面板</title>
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+    <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jqueryui/style.css">
+    <script>
+        $(function () {
+            $("#accordion").accordion({
+                heightStyle:"fill"        //控制acordion和每个面板的高度
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="ui-widget-content" style="width:500px;">
+    <div id="accordion">
+        <h3>jQuery教程</h3>
+        <div>
+            <p>jQery简介</p>
+            <p>jQery下载</p>
+            <p>jQery使用</p>
+        </div>
+        <h3>jQuery手册</h3>
+        <div>
+            <p>api文档</p>
+            <p>jQuery特效</p>
+            <p>jQery动画</p>
+        </div>
+        <h3>jQuery实例</h3>
+        <div>
+            <ul>
+                <li>拖动</li>
+                <li>缩放</li>
+                <li>放置</li>
+                <li>选择</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
