@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电影排行榜</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 350px;
+            height: 450px;
+            margin: 50px auto;
+            border: 1px solid #000;
+        }
+        .box>h1{
+            font-size: 20px;
+            line-height: 35px;
+            color: deeppink;
+            padding-left: 10px;
+            border-bottom: 1px dashed #ccc;
+        }
+        ul>li{
+            list-style: none;
+            padding: 5px 10px;
+            border: 1px dashed #ccc;
+        }
+        ul>li:nth-child(-n+3) span{
+            background: deeppink;
+        }
+        ul>li>span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background:#ccc;
+            text-align: center;
+            line-height: 20px;
+            margin-right: 10px;
+        }
+        .content{
+            height: 120px;
+            padding-top: 5px;
+            display: none;
+        }
+        .content>img{
+            width: 80px;
+            height: 120px;
+            float: left;
+        }
+        .content>p{
+            width: 230px;
+            height: 120px;
+            float: right;
+            font-size: 12px;
+            line-height: 20px;
+            overflow: hidden;                //指定如果内容溢出一个元素的框，会发生什么
+                     //指定当文本溢出包含它的元素，应该发生什么
+        }
+        .current .content{
+            display: block;
+        }
+    </style>
+    <script language="javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $("li").mouseenter(function () {   //监听li的移入事件
+                $(this).addClass("current");
+            });
+            $("li").mouseleave(function () {   //监听li的移出事件
+                $(this).removeClass("current");
+            });
+        })
+    </script>
+</head>
+<body>
+<div class="box">
+    <h1>电影排行榜</h1>
+    <ul>
+        <li><span>1</span>哪吒之魔童降世
+            <div class="content">
+                <img src="images/1.jpg" alt="">
+                <p>
+                    简介：天地灵气孕育出一颗能量巨大的混元珠，元始天尊将混元珠提炼成灵珠和魔丸，灵珠投胎为人，
+                    助周伐纣时可堪大用；而魔丸则会诞出魔王，为祸人间。元始天尊启动了天劫咒语，3年后天雷将会降临，
+                    摧毁魔丸。太乙受命将灵珠托生于陈塘关李靖家的儿子哪吒身上。然而阴差阳错，灵珠和魔丸竟然被掉包。
+                    本应是灵珠英雄的哪吒却成了混世大魔王，这调皮捣蛋顽劣不堪的哪吒却徒有一颗做英雄的心。
+                    然而面对众人对哪吒的误解和即将来临的天雷的降临，哪吒是否命中注定会立地成魔，他将何去何从
+                </p>
+            </div>
+        </li>
+        <li><span>2</span>诛仙
+            <div class="content">
+                <img src="images/2.jpg" alt="">
+                <p>
+                    简介：草庙村被屠，少年张小凡双亲离世，被青云门大竹峰收留。机缘巧合之下，他习得佛门天音功法，
+                    又意外获得魔教法器烧火棍，踏上强者之路的同时，也让他陷入了巨大的危机。至魔法器的现世，
+                    与陆雪琪、碧瑶、田灵儿三个女生间命运的交错，都让他原本单纯的人生轨迹充满变数。
+                    一个勇者驳斥命运的传奇之旅就此展开
+                </p>
+            </div>
+        </li>
+        <li><span>3</span>使徒行者
+            <div class="content">
+                <img src="images/4.jpg" alt="">
+                <p>
+                    简介：童年兄弟意外失散，
+                    30年后因一桩罪案相见，两人已身处不同阵营。随着对罪案调查的深入，
+                    一个多年来隐于幕后的恐怖组织渐渐浮出水面。
+                </p>
+            </div>
+        </li>
+        <li><span>4</span>鼠胆英雄
+            <div class="content">
+                <img src="images/3.jpg" alt="">
+                <p>
+                    简介：三十年代的上海滩，胆小如鼠的青龙帮小弟闫大海发现自己身患绝症之际，竟阴差阳错当上了警察。
+                    为了给梦中女神--飞乐门舞女杜卿挣赎身钱，他计划在自己生命中所剩不多的时间里因公殉职，
+                    从而拿到抚恤金拯救女神。然而，在他疯狂执行铲除“黑帮”、“毒枭”任务以身赴死期间，
+                    却总是事与愿违求死不得死，反而得到屡屡升迁。然而，纸醉金迷的上海滩，还隐藏着更大的危机。
+                </p>
+            </div>
+        </li>
+        <li><span>5</span>荒岛求生
+            <div class="content">
+                <img src="images/5.jpg" alt="">
+                <p>
+                    简介：本影片讲述了美妍、长坤、元凯等人在荒岛上搜寻失踪人口的过程中，
+                    发现了岛上巨兽以及植物的体内含有能够突破细胞分裂次数的特殊成分
+                    ，对这一被学术界称之为“海夫利客极限”的定论进行提取研究后，解读了大自然中某些不为人知的秘密的故事。
+                    在寻找的过程中，遭遇了各种狂暴猛兽的袭击，他们究竟是命丧兽口？还是力挽狂澜？
+                </p>
+            </div>
+        </li>
+        <li><span>6</span>上海堡垒
+            <div class="content">
+                <img src="images/6.jpg" alt="">
+                <p>
+                    简介：未来世界外星文明突袭地球，各大城市纷纷陷落，上海成为了人类最后的希望。
+                    随着外星势力不断发动猛烈袭击，一群心怀热血的年轻人，带着信念与责任，在上海坚守人类最后的战场。
+                    影片由滕华涛执导，鹿晗、舒淇领衔主演。讲述了大学生江洋（鹿晗饰）追随女指挥官林澜（舒淇饰）
+                    进入了上海堡垒成为一名指挥员，共同保卫人类的故事
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
